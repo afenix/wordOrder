@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/wordOrder.js"></script>
+    <title>Word Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Word Orderer</h1>
+      <div id="form">
+        <form id="word-order">
+          <label for="paragraph"></label>
+          <input type="text" id="paragraph">
+
+          <button type="submit" class="btn btn-md btn-info"><span class="glyphicon glyphicon-pencil"></span></button>
+        </form>
+      </div>
+      <div id="result">
+        <p>
+          List is ordered from most frequently used words, to least used words.
+        </p>
+        <ul>
+          <li><span class="werds"></span></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
