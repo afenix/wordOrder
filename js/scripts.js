@@ -20,25 +20,22 @@ var wordOrder = function(paragraph) {
     });
 
     wordCounter[counter] = word;
-
     listWords.push(counter + ", " + wordCounter[counter]);
-
     counter = 0;
   });
 
-  listWords.sort();
-
+  listWords.sort().reverse();
   return listWords;
 };
 
-// $(document).ready(function() {
-//   $("form#word-order").submit(function(event) {
-//     var number = ($("input#paragraph").val());
-//     var result = wordOrder(werds);
-//
-//     $(".werds").text(result);
-//     $("#result").show();
-//
-//     event.preventDefault();
-//   });
-// });
+$(document).ready(function() {
+  $("form#word-order").submit(function(event) {
+    var paragraph = ($("input#paragraph").val());
+    var result = wordOrder(paragraph);
+
+    $(".werds").text(result);
+    $("#result").show();
+
+    event.preventDefault();
+  });
+});
