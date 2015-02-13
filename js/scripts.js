@@ -20,7 +20,7 @@ var wordOrder = function(paragraph) {
     });
 
     wordCounter[counter] = word;
-    listWords.push(counter + ", " + wordCounter[counter]);
+    listWords.push(counter + " " + wordCounter[counter] +"\'s" );
     counter = 0;
   });
 
@@ -33,7 +33,10 @@ $(document).ready(function() {
     var paragraph = ($("input#paragraph").val());
     var result = wordOrder(paragraph);
 
-    $(".werds").text(result);
+    result.forEach(function(thisResult) {
+      $("ul").append("<li>" + thisResult + "</li>")
+    })
+
     $("#result").show();
 
     event.preventDefault();
